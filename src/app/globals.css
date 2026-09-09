@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --background: #010a13;
+  --foreground: #f0e6d2;
+}
+
+body {
+  background-color: #010a13;
+  color: #f0e6d2;
+  font-family: 'Inter', sans-serif;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(10, 200, 185, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 90% 80%, rgba(200, 170, 110, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #091428 0%, #010a13 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Custom Hextech Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #010a13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #785a28;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c8aa6e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
