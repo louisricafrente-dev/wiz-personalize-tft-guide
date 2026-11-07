@@ -10,6 +10,19 @@ const nextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Permissions-Policy",
+            value: "clipboard-read=*, clipboard-write=*",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

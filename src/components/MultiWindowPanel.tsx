@@ -326,7 +326,8 @@ export function MultiWindowPanel({
           src={panel.currentUrl || activeRoute.url}
           title={panel.title || site.name}
           className={`w-full h-full border-none ${isDragging ? 'pointer-events-none' : ''}`}
-          sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-modals allow-top-navigation-by-user-activation"
+          allow="clipboard-write *; clipboard-read *"
         />
 
         {/* Drag & Drop Target Overlay: Enables dropping anywhere across the entire window */}
